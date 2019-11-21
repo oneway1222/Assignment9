@@ -43,10 +43,17 @@ Entering the name `<script>alert('James found the XSS!');</script>` in the conta
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Insecure Direct Object Reference
+![IDOR](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/IDOR.gif)
 
-Vulnerability #2: __________________
 
+Red is missing code that prevents sensitive information from going public. By changing the id parameter, we can access a profile that isn't supposed to be public (10) until a later date and a profile of a fired employee (11).
+Blue and green avoid this by redirecting for ids that are not supposed to be publicly shown.
+
+Vulnerability #2: Cross-Site Request Forgery
+![CSRF](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/CSRF.gif)
+
+Red doesn't check the CSRF token when forms are submitted. Therefore, we can theoretically create a form elsewhere that will send a POST request while ignoring the CSRF token. As a proof of concept, we can change the CSRF token in Burp and still be able to edit the salesperson Bobby Tables' profile which should be restricted to staff access.
 
 ## Notes
 
