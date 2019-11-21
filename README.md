@@ -21,7 +21,10 @@ Vulnerability #1: SQL Injection
 
 In the salesperson directory, it uses the id parameter in the URL to perform SQL queries without sanitizing. In the GIF, we can enter an AND clause and if we set it to a false boolean value, then we will be redirected to the directory as Blue makes sure to redirect for ids that are not found.
 
-Vulnerability #2: __________________
+Vulnerability #2: Session Hijacking/Fixation
+![Session Hijacking](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/Session_Hijacking.gif)
+
+Using two different browsers, one acting as a normal user and one as a staff user, changing the session id on the normal user's browser to the staff user's session will give access to the staff menu.
 
 
 ## Green
