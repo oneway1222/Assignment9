@@ -29,9 +29,16 @@ Using two different browsers, one acting as a normal user and one as a staff use
 
 ## Green
 
-Vulnerability #1: __________________
+Vulnerability #1: User Enumeration
+![User Enumeration](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/user_enumeration.gif)
 
-Vulnerability #2: __________________
+The difference between the failure and failed class determines if the user for the login attempt actually exists.
+
+Vulnerability #2: Cross-Site Scripting
+![Cross-Site Scripting](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/XSS.gif)
+
+
+Entering the name `<script>alert('James found the XSS!');</script>` in the contact/feedback form will execute the script when the staff views the feedback. As you can see, a previous student added a script to redirect to Google so my script will not be able to run. It would, however, execute in the absence of a preceding redirect.
 
 
 ## Red
