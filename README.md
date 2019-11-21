@@ -46,7 +46,6 @@ Entering the name `<script>alert('James found the XSS!');</script>` in the conta
 Vulnerability #1: Insecure Direct Object Reference
 ![IDOR](https://raw.githubusercontent.com/jamesw8/pentesting-live-targets/master/IDOR.gif)
 
-
 Red is missing code that prevents sensitive information from going public. By changing the id parameter, we can access a profile that isn't supposed to be public (10) until a later date and a profile of a fired employee (11).
 Blue and green avoid this by redirecting for ids that are not supposed to be publicly shown.
 
